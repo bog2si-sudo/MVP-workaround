@@ -1,4 +1,3 @@
-````
 # Make.com Input / Output Contract v1
 
 ## Purpose
@@ -40,8 +39,49 @@ Tally webhook after the user completes Q1–Q15 and submits email.
   "utm_campaign": "",
   "referral_code": ""
 }
-stage = q13
-industry = q14
-region = q15
+```
 
-````
+## Airtable write: assessments
+
+Create one assessment record with required fields:
+
+```json
+{
+  "email": "",
+  "q1": "",
+  "q2": "",
+  "q3": "",
+  "q4": "",
+  "q5": "",
+  "q6": "",
+  "q7": "",
+  "q8": "",
+  "q9": "",
+  "q10": "",
+  "q11": "",
+  "q12": "",
+  "q13": "",
+  "q14": "",
+  "q15": "",
+  "stage": "",
+  "industry": "",
+  "region": "",
+  "utm_source": "",
+  "utm_medium": "",
+  "utm_campaign": "",
+  "referral_code": "",
+  "lead_source": "free_assessment",
+  "is_paid": false,
+  "payment_status": "unpaid",
+  "delivery_status": "not_started",
+  "scoring_model_version": "v1",
+  "prompt_version": "v1",
+  "roadmap_version": "v1"
+}
+```
+
+### Derived fields
+
+- `stage` = `q13`
+- `industry` = `q14`
+- `region` = `q15`
